@@ -2,11 +2,11 @@
   "private": true,
   "author": "liangchaofei <chaofei_liang@126.com>",
   "scripts": {
-    "dev": "max dev",
     "build": "max build",
+    "dev": "max dev",
     "format": "prettier --cache --write .",
-    "prepare": "husky install",
     "postinstall": "max setup",
+    "prepare": "husky install",
     "setup": "max setup",
     "start": "npm run dev"
   },
@@ -15,10 +15,12 @@
     "@ant-design/pro-components": "^2.6.49",
     "@umijs/max": "^4.1.1",
     "antd": "^5.13.3",
+    "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1"
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.7",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "husky": "^9.0.7",
