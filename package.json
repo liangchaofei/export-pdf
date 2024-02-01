@@ -15,11 +15,13 @@
     "@ant-design/pro-components": "^2.6.49",
     "@umijs/max": "^4.1.1",
     "antd": "^5.13.3",
+    "dom-to-image": "^2.6.0",
     "file-saver": "^2.0.5",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.1"
   },
   "devDependencies": {
+    "@types/dom-to-image": "^2.6.7",
     "@types/file-saver": "^2.0.7",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
