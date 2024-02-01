@@ -1,7 +1,8 @@
 // Home.jsx
-import React, { useRef } from "react";
 import { Button } from 'antd';
 import html2canvas from 'html2canvas';
+import { useRef } from 'react';
+import ProTable from './components/ProTable';
 
 const Home = () => {
   const contentRef = useRef(null);
@@ -27,7 +28,6 @@ const Home = () => {
       };
 
       const filename = 'output.pdf';
-
       worker.postMessage({ imgData, filename });
     });
   };
@@ -35,7 +35,23 @@ const Home = () => {
   return (
     <div>
       <Button onClick={handleClick}>导出</Button>
-      <div ref={contentRef}>aaa</div>
+      <div ref={contentRef}>
+        <div>aaa</div>
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+        <ProTable />
+      </div>
     </div>
   );
 };

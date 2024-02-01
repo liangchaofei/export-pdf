@@ -1,23 +1,37 @@
-// pdfWorker.js
+// export const sparkBlob = new Blob([
+//   `
+//     importScripts(
+//         'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js',
+//       );
+//       self.addEventListener(
+//         'message',
+//         function (event) {
+//           genPdf(event.data);
+//         },
+//         false
+//       );
 
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+//       function genPdf(data){
 
-self.onmessage = function (event) {
-    const { textContent, filename } = event.data;
+//         const { imgData, filename } = data;
 
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = textContent;
+//         // Instantiate jsPDF directly in the worker
+//         const pdf = new self.jspdf.jsPDF('p', 'mm', 'a4');
 
-    html2canvas(tempDiv, { scale: 2 }).then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        const imgWidth = pdf.internal.pageSize.getWidth();
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+//         // Set the scale directly in the addImage method
+//         pdf.addImage(
+//             imgData,
+//             'PNG',
+//             0,
+//             0,
+//             pdf.internal.pageSize.getWidth(),
+//             pdf.internal.pageSize.getHeight(),
+//         );
 
-        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-        pdf.save(filename);
+//         // Save the PDF
+//         pdf.save(filename);
 
-        self.postMessage('PDF generated successfully!');
-    });
-};
+//         self.postMessage('PDF generated successfully!');
+//       }
+//     `,
+// ]);
