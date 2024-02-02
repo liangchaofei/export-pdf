@@ -6,7 +6,6 @@ import ProTable from './components/ProTable';
 const Home = () => {
   const contentRef = useRef(null);
   const [loading, setLoading] = useState(false);
-
   const getSections = (content: any) => {
     const sections = [];
     const pageSize = 800; // You can adjust this value based on your requirements
@@ -27,9 +26,9 @@ const Home = () => {
 
     return sections;
   };
+
   async function captureSection(section: any) {
     const wrapper = document.createElement('div');
-    wrapper.style.display = 'none';
     wrapper.appendChild(section.cloneNode(true));
     document.body.appendChild(wrapper);
 
@@ -39,12 +38,11 @@ const Home = () => {
     const imgWidth = 595.28;
     const imgHeight = (592.28 / contentWidth) * contentHeight;
     return {
-      dataUrl: canvas.toDataURL('image/png'),
+      dataUrl: canvas.toDataURL('image/jpeg'),
       width: imgWidth,
       height: imgHeight,
     };
   }
-
   const handleClick = async () => {
     setLoading(true);
     const htmlContent = contentRef.current;
@@ -98,14 +96,23 @@ const Home = () => {
           src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
           alt=""
         />
+        <ProTable />
+        <ProTable />
+        <ProTable />
         <img
           src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
           alt=""
         />
+        <ProTable />
+        <ProTable />
+        <ProTable />
         <img
           src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
           alt=""
         />
+        <ProTable />
+        <ProTable />
+        <ProTable />
         <img
           src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
           alt=""
